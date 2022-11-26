@@ -1,0 +1,453 @@
+/* Start variables */
+
+:root {
+    --main-color: #00405e;
+    --second-color: #70D3F4;
+}
+
+/* End variables */
+
+/* Start general rules */
+
+@font-face {
+    font-family: STCLight;
+    src: url(../fonts/STCForward-Light.otf);
+}
+
+@font-face {
+    font-family: STCThin;
+    src: url(../fonts/STCForward-Thin.otf);
+}
+
+@font-face {
+    font-family: STCMedium;
+    src: url(../fonts/STCForward-Medium.otf);
+}
+
+@font-face {
+    font-family: STCRegular;
+    src: url(../fonts/STCForward-Regular.otf);
+}
+
+@font-face {
+    font-family: STCBold;
+    src: url(../fonts/STCForward-Bold.otf);
+}
+
+@font-face {
+    font-family: STCExtraBold;
+    src: url(../fonts/STCForward-ExtraBold.otf);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: STCRegular;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* End general rules */
+
+/* Start landing */
+
+.landing {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 50px 0;
+    z-index: 0;
+}
+
+.landing .header {
+    width: 600px;
+    max-width: 100%;
+    position: relative;
+}
+
+.back {
+    position: absolute;
+    color: white;
+    top: 40px;
+    left: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.landing .header .text {
+    text-align: center;
+}
+
+.landing .header .text h1 {
+    color: white;
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.landing .header .image img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* End landing */
+
+/* Start register */
+
+
+.content {
+    position: relative;
+    background-color: white;
+    margin-bottom: 40px;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -33.3px;
+    width: 100%;
+    background-color: white;
+    height: 35px;
+    border-radius: 50% 50% 0 0/ 100% 100% 0 0;
+}
+
+.content .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    width: 450px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    top: 10px;
+}
+
+.content .container .register h2 {
+    margin-bottom: 32px;
+
+    font-size: 36px;
+    color: var(--main-color);
+    text-align: center;
+}
+
+.languages {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.languages a {
+    font-size: 18px;
+    color: var(--main-color);
+    text-transform: capitalize;
+    font-family: STCBold;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.languages a:hover {
+    background-color: var(--main-color);
+    color: white;
+    border-color: transparent;
+}
+
+.languages+p {
+    color: var(--main-color);
+    margin: 40px 0;
+    font-family: STCMedium;
+}
+
+/* End Content */
+
+/* Start Form Arabic */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    gap: 0 50px;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.form .parentData,
+.form .studentData {
+    margin-top: 20px;
+}
+
+.form h2 {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.form .inputData {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.form .inputData .inputRow {
+    width: 100%;
+}
+
+.form .inputData .inputRow input, .form .inputData .inputRow .select {
+    width: 100%;
+    display: block;
+    border: 2px solid #ddd;
+    outline: 0;
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.form .inputData .inputRow input::placeholder {
+    color: #aaa;
+}
+
+select {
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    display: block;
+    text-align: right;
+    color: #aaa;
+    width: 100%;
+}
+
+option:disabled {
+    background-color: var(--main-color);
+    color: white;
+}
+
+option {
+    color: var(--main-color);
+}
+
+optgroup {
+    margin-top: 50px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+.submit input[type="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 12.5px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+}
+
+.gender {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    color: #aaa;
+}
+
+.genderType {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    flex-direction: row-reverse;
+}
+
+.genderType .male, .genderType .female {
+    display: flex;
+    gap: 10px;
+}
+
+.genderType .male label, .genderType .female label {
+    color: var(--second-color);
+    font-family: STCMedium;
+}
+
+.genderType input[type="radio"] {
+    accent-color: var(--main-color);
+}
+
+/* End Form Arabic */
+
+/* Start success message */
+
+.success .back {
+    color: var(--main-color);
+}
+
+.success .container {
+    padding: 85px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    text-align: center;
+}
+
+.success .successMessage {
+    margin-bottom: 90px;
+}
+
+.success .successMessage svg {
+    color: var(--second-color);
+    font-size: 120px;
+    margin-bottom: 10px;
+}
+
+.success .successMessage h2 {
+    color: var(--main-color);
+}
+
+.success .social {
+    color: var(--main-color);
+    font-weight: normal;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.success .social p {
+    margin-bottom: 35px;
+}
+
+.success .social .links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.success .social .links a {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border-color: rgb(0 64 94/25%);
+    transition: 0.3s;
+}
+
+.success .social .links a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.success .contactMessage {
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.success .contactMessage .text p {
+    line-height: 1.3;
+}
+
+.success .contactMessage .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-family: STCBold;
+}
+
+.success .contactMessage .number svg {
+    font-size: 28px;
+}
+
+.success .contactMessage .number a {
+    color: var(--main-color);
+}
+
+/* End success message */
+
+
+/* X small screen */
+
+@media(max-width:767px) {}
+
+/* small screen */
+
+@media(min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium screen */
+
+@media(min-width:992) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large screen */
+
+@media(min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
